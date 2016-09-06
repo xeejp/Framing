@@ -33,7 +33,7 @@ class Experiment extends Component {
     const Text = question_text[sequence]
     return (sequence != "answered")?
       <div style={{height: 'auto'}}>
-        <h5>{Question.text}</h5>
+       {Question.text.split('\n').map( line => <h5>{line}</h5>)}
         <SwipeableViews index={this.state.slideIndex} disabled={true}>
           <div style={{overflow: 'hidden'}}>
             {Text.text.split('\n').map( line => <p>{line}</p>)}
