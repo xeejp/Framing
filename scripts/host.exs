@@ -1,6 +1,6 @@
-defmodule AllaisParadox.Host do
-  alias AllaisParadox.Main
-  alias AllaisParadox.Actions
+defmodule Framing.Host do
+  alias Framing.Main
+  alias Framing.Actions
 
   require Logger
 

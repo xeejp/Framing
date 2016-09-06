@@ -41,7 +41,7 @@ class Chart extends Component {
                     enabled: false,
                   },
                   title: {
-                    text: 'はじめの質問で' + question_text["question1"].title[0] + 'を選んだ人'
+                    text: '1問目の結果'
                   },
                   plotOptions: {
                       pie: {
@@ -61,14 +61,14 @@ class Chart extends Component {
                     name: '回答',
                     colorByPoint: true,
                     data: [{
-                      name: '次の質問で' + question_text["question2"].title[0] + 'を選んだ人',
+                      name: question_text["question1"].title[0] + 'を選んだ人',
                       y: oneone,
                     }, {
-                       name: '次の質問で' + question_text["question2"].title[1] + 'を選んだ人',
+                       name: question_text["question1"].title[1] + 'を選んだ人',
                        y: onetwo,
                     }]
                   }]
-             }} /> : <p>はじめの質問で{question_text["question1"].title[0]}を選んだ人はいませんでした。</p>}
+             }} /> : <p>1問目に回答した人がいませんでした。</p>}
           {(twoone + twotwo != 0)?
             <Highcharts
               config={{
@@ -79,7 +79,7 @@ class Chart extends Component {
                     enabled: false,
                   },
                   title: {
-                    text: 'はじめの質問で' + question_text["question1"].title[1] + 'を選んだ人'
+                    text: '2問目の結果'
                   },
                   plotOptions: {
                       pie: {
@@ -99,14 +99,14 @@ class Chart extends Component {
                      name: '回答',
                    colorByPoint: true,
                    data: [{
-                       name: '次の質問で' + question_text["question2"].title[1] + 'を選んだ人',
+                       name: question_text["question2"].title[1] + 'を選んだ人',
                        y: twotwo,
                       }, {
-                       name: '次の質問で' + question_text["question2"].title[0] + 'を選んだ人',
+                       name: question_text["question2"].title[0] + 'を選んだ人',
                        y: twoone,
                    }]
                   }]
-             }} /> : <p>はじめの質問で{question_text["question1"].title[1]}を選んだ人はいませんでした。</p>}
+             }} /> : <p>2問目に回答した人がいませんでした。</p>}
         </span>
       </CardText>
     </Card>

@@ -1,6 +1,6 @@
-defmodule AllaisParadox.Actions do
-  alias AllaisParadox.Participant
-  alias AllaisParadox.Host
+defmodule Framing.Actions do
+  alias Framing.Participant
+  alias Framing.Host
 
   def change_page(data, page) do
     action = get_action("change page", page)

@@ -1,4 +1,4 @@
-defmodule AllaisParadox do
+defmodule Framing do
   use Xee.ThemeScript
   require Logger
 
@@ -7,9 +7,9 @@ defmodule AllaisParadox do
   require_file "scripts/participant.exs"
   require_file "scripts/actions.exs"
 
-  alias AllaisParadox.Main
-  alias AllaisParadox.Host
-  alias AllaisParadox.Participant
+  alias Framing.Main
+  alias Framing.Host
+  alias Framing.Participant
 
   # Callbacks
   def script_type do

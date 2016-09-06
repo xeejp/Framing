@@ -32,7 +32,8 @@ class App extends Component {
     if(participants != undefined){
       for(var i in participants) {
         if(participants[i].question2 != 0){
-          ans[participants[i].question1 - 1][participants[i].question2 - 1]++
+          ans[0][participants[i].question1 - 1]++
+          ans[1][participants[i].question1 - 1]++
         }
       }
     }

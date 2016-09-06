@@ -1,5 +1,5 @@
-defmodule AllaisParadox.Participant do
-  alias AllaisParadox.Actions
+defmodule Framing.Participant do
+  alias Framing.Actions
 
   # Actions
   def fetch_contents(data, id) do
