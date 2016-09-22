@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton'
 import RaisedButton from 'material-ui/RaisedButton'
+import { Card, CardText } from 'material-ui/Card'
 import SwipeableViews from 'react-swipeable-views'
 
 import { nextQuestion } from './actions'
@@ -32,6 +33,7 @@ class Experiment extends Component {
     const Question = question_text["question"]
     const Text = question_text[sequence]
     return (sequence != "answered")?
+    <Card><CardText>
       <div style={{height: 'auto'}}>
        {Question.text.split('\n').map( line => <h5>{line}</h5>)}
         <SwipeableViews index={this.state.slideIndex} disabled={true}>
@@ -67,7 +69,8 @@ class Experiment extends Component {
           </div>
         </SwipeableViews>
       </div>
-    : <div>{Text.text.split('\n').map( line => <p>{line}</p>)}</div>
+      </CardText></Card>
+    : <Card><CardText>{Text.text.split('\n').map( line => <p>{line}</p>)}</CardText></Card>
   }
 }
 
